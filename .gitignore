@@ -1,0 +1,24 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local AI agent internal memory (Strict Isolation Invariant)
+memory/
+
+# Environment and sensitive keys
+.env
+.env.*
+*.secret
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# Temporary and build artifacts
+*.tmp
+*.log
+scratch/
