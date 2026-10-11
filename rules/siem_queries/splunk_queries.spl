@@ -1,0 +1,28 @@
+# Splunk SPL Enterprise Detection Queries for Chromium App Spoofing (CASF)
+# Author: Maya Thorne · 2026-10-11
+
+# Query 1: Detect Chromium Browsers Spawned with --app Flag (Sysmon EID 1 & Event 4688)
+index=windows sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+| where match(CommandLine, "(?i)--app=")
+| stats count, values(CommandLine) as CmdLines, values(ParentImage) as Parents by host, User, Image
+| sort - count
+
+# Query 2: Detect Chromium App Mode Loading Local HTML or UNC Files
+index=windows sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+| where match(CommandLine, "(?i)--app=.*(\.html|\.htm|file:|\\\\[a-zA-Z0-9_])")
+| table _time, host, User, Image, CommandLine, ParentImage
+
+# Query 3: Detect Incognito Session Isolation in App Mode
+index=windows sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+| where match(CommandLine, "(?i)--app=") AND match(CommandLine, "(?i)-(?:-)?(incognito|inprivate)")
+| table _time, host, User, Image, CommandLine
+
+# Query 4: Detect Scripting Interpreters Spawning Browser in App Mode
+index=windows sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=1
+| where match(CommandLine, "(?i)--app=") AND match(ParentImage, "(?i)(powershell|cmd|wscript|cscript|mshta)\.exe")
+| table _time, host, User, ParentImage, Image, CommandLine
+
+# Query 5: Detect Suspicious LNK Creation in Startup or Desktop (Sysmon EID 11)
+index=windows sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" EventCode=11
+| where match(TargetFilename, "(?i)\\(Desktop|Start Menu\\Programs\\Startup)\\.*\.lnk")
+| table _time, host, Image, TargetFilename

@@ -1,0 +1,19 @@
+# Elastic KQL & EQL Queries for Chromium App Spoofing (CASF)
+# Author: Maya Thorne · 2026-10-11
+
+# KQL 1: Chromium App Mode Evasion Detection
+process.command_line: *--app=* and process.name: (chrome.exe or msedge.exe or brave.exe or opera.exe)
+
+# KQL 2: Local HTML Application Mode Execution
+process.command_line: *--app=* and process.command_line: (*.html* or *.htm* or *file:* or *\\*)
+
+# KQL 3: App Mode with Incognito Credential Isolation
+process.command_line: *--app=* and process.command_line: (*incognito* or *inprivate*)
+
+# KQL 4: Suspicious Scripting Parent Spawning Browser
+process.command_line: *--app=* and process.parent.name: (powershell.exe or cmd.exe or wscript.exe or cscript.exe or mshta.exe)
+
+# EQL Sequence: LNK Drop followed by Chromium App Execution
+sequence by host.id with maxspan=5m
+  [file where event.action == "creation" and file.extension == "lnk" and file.path : "*\\Startup\\*"]
+  [process where process.command_line : "*--app=*"]
