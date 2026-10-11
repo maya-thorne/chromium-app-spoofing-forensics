@@ -61,6 +61,10 @@ Penyerang mengeksploitasi pintasan Windows (`.lnk`) dengan ikon Teams atau OneDr
 
 ## 📚 Indeks Whitepaper & Laporan Teknis
 
+<details open>
+<summary><b>📚 View 4 Core Architecture &amp; Forensic Whitepapers</b></summary>
+<br>
+
 <table width="100%">
   <thead>
     <tr>
@@ -103,10 +107,15 @@ Penyerang mengeksploitasi pintasan Windows (`.lnk`) dengan ikon Teams atau OneDr
     </tr>
   </tbody>
 </table>
+</details>
 
 ---
 
 ## ⚡ Menjalankan Toolchain Forensik CLI
+
+<details open>
+<summary><b>⚡ View CLI Execution Commands &amp; Inspection Options</b></summary>
+<br>
 
 ```bash
 # Analyze Windows Shortcut (.lnk) artifact
@@ -118,6 +127,7 @@ python -m src.cli --cli "brave.exe --app=C:\Users\user\Desktop\1.html -incognito
 # Output structured JSON for SIEM / SOAR pipeline ingestion
 python -m src.cli --lnk "references/poc_shortcuts/03_brave_app_local_html_incognito.lnk" --json
 ```
+</details>
 
 ---
 

@@ -61,6 +61,10 @@ Chromium 内核浏览器（Chrome、Brave、Edge 等）的应用模式（`--app`
 
 ## 📚 核心逆向工程白皮书与技术报告索引
 
+<details open>
+<summary><b>📚 View 4 Core Architecture &amp; Forensic Whitepapers</b></summary>
+<br>
+
 <table width="100%">
   <thead>
     <tr>
@@ -103,10 +107,15 @@ Chromium 内核浏览器（Chrome、Brave、Edge 等）的应用模式（`--app`
     </tr>
   </tbody>
 </table>
+</details>
 
 ---
 
 ## ⚡ 极速 CLI 取证工具链实战
+
+<details open>
+<summary><b>⚡ View CLI Execution Commands &amp; Inspection Options</b></summary>
+<br>
 
 ```bash
 # Analyze Windows Shortcut (.lnk) artifact
@@ -118,6 +127,7 @@ python -m src.cli --cli "brave.exe --app=C:\Users\user\Desktop\1.html -incognito
 # Output structured JSON for SIEM / SOAR pipeline ingestion
 python -m src.cli --lnk "references/poc_shortcuts/03_brave_app_local_html_incognito.lnk" --json
 ```
+</details>
 
 ---
 
