@@ -45,17 +45,27 @@ Ameaças utilizam atalhos (`.lnk`) com ícones corporativos legítimos executand
 
 ## 🏗️ Pipeline de Detecção EDR/SIEM
 
+<details open>
+<summary><b>🏗️ Ver Pipeline de Detecção EDR/SIEM (Clique para recolher/expandir)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/pt-BR/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 Demonstração de Terminal Forense
 
+<details open>
+<summary><b>💻 Ver Demonstração de Terminal Forense (Clique para recolher/expandir)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

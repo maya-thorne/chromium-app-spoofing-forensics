@@ -37,17 +37,27 @@
 
 ## 🏛️ المعمارية التقنية وطوبولوجيا التحليل
 
+<details open>
+<summary><b>🏛️ عرض المعمارية وطوبولوجيا التحليل (انقر للطي/التوسيع)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/ar/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ مسار كشف EDR و SIEM للفرق الزرقاء
 
+<details open>
+<summary><b>🏗️ عرض مسار كشف EDR و SIEM (انقر للطي/التوسيع)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/ar/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 

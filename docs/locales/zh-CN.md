@@ -37,25 +37,40 @@ Chromium 内核浏览器（Chrome、Brave、Edge 等）的应用模式（`--app`
 
 ## 🏛️ 系统架构与分析拓扑
 
+<details open>
+<summary><b>🏛️ 系统架构与分析拓扑展开/折叠 (点击切换)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/zh-CN/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ 蓝队 EDR/SIEM 检测流水线
 
+<details open>
+<summary><b>🏗️ 蓝队 EDR/SIEM 检测流水线展开/折叠 (点击切换)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/zh-CN/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 交互式取证终端实机演示
 
+<details open>
+<summary><b>💻 交互式取证终端实机演示展开/折叠 (点击切换)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

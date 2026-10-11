@@ -37,25 +37,40 @@ Les attaquants exploitent des raccourcis Windows (`.lnk`) déguisés en Teams ou
 
 ## 🏛️ Architecture Système & Topologie d'Analyse
 
+<details open>
+<summary><b>🏛️ Voir Architecture Système & Topologie (Cliquer pour replier/déplier)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/fr/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ Pipeline de Détection EDR/SIEM Blue Team
 
+<details open>
+<summary><b>🏗️ Voir Pipeline de Détection EDR/SIEM (Cliquer pour replier/déplier)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/fr/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 Démonstration Terminal Forensique
 
+<details open>
+<summary><b>💻 Voir Démonstration Terminal Forensique (Cliquer pour replier/déplier)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

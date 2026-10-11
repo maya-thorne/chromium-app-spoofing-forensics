@@ -96,6 +96,7 @@ flowchart TD
 <p align="center">
   <img src="./docs/assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

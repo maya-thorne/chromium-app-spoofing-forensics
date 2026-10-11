@@ -37,25 +37,40 @@
 
 ## 🏛️ सिस्टम आर्किटेक्चर और विश्लेषण टोपोलॉजी
 
+<details open>
+<summary><b>🏛️ सिस्टम आर्किटेक्चर और टोपोलॉजी देखें (संक्षिप्त/विस्तार करने के लिए क्लिक करें)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/hi/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ ब्लू टीम EDR/SIEM डिटेक्शन पाइपलाइन
 
+<details open>
+<summary><b>🏗️ ब्लू टीम EDR/SIEM डिटेक्शन पाइपलाइन देखें (संक्षिप्त/विस्तार करने के लिए क्लिक करें)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/hi/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 इंटरैक्टिव फोरेंसिक टर्मिनल डेमो
 
+<details open>
+<summary><b>💻 इंटरैक्टिव फोरेंसिक टर्मिनल डेमो देखें (संक्षिप्त/विस्तार करने के लिए क्लिक करें)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

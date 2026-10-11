@@ -37,25 +37,40 @@ Los adversarios modifican accesos directos (`.lnk`) suplantando iconos de Teams,
 
 ## 🏛️ Arquitectura del Sistema y Topología
 
+<details open>
+<summary><b>🏛️ Ver Arquitectura del Sistema y Topología (Clic para plegar/desplegar)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/es/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ Pipeline de Detección EDR/SIEM para Blue Team
 
+<details open>
+<summary><b>🏗️ Ver Pipeline de Detección EDR/SIEM (Clic para plegar/desplegar)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/es/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 Demostración en Terminal Forense
 
+<details open>
+<summary><b>💻 Ver Demostración en Terminal Forense (Clic para plegar/desplegar)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

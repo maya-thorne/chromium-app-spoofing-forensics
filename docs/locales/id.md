@@ -37,25 +37,40 @@ Penyerang mengeksploitasi pintasan Windows (`.lnk`) dengan ikon Teams atau OneDr
 
 ## 🏛️ Arsitektur Sistem & Topologi Analisis
 
+<details open>
+<summary><b>🏛️ Lihat Arsitektur Sistem & Topologi (Klik untuk menutup/membuka)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/id/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ Pipeline Deteksi EDR/SIEM Blue Team
 
+<details open>
+<summary><b>🏗️ Lihat Pipeline Deteksi EDR/SIEM (Klik untuk menutup/membuka)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/id/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 Demonstrasi Terminal Forensik
 
+<details open>
+<summary><b>💻 Lihat Demonstrasi Terminal Forensik (Klik untuk menutup/membuka)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

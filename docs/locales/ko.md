@@ -37,25 +37,40 @@
 
 ## 🏛️ 시스템 아키텍처 및 분석 토폴로지
 
+<details open>
+<summary><b>🏛️ 시스템 아키텍처 및 분석 토폴로지 열기/닫기 (클릭하여 접기/펼치기)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/ko/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ 블루팀 EDR/SIEM 탐지 파이프라인
 
+<details open>
+<summary><b>🏗️ 블루팀 EDR/SIEM 탐지 파이프라인 열기/닫기 (클릭하여 접기/펼치기)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/ko/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 대화형 포렌식 터미널 시연
 
+<details open>
+<summary><b>💻 대화형 포렌식 터미널 시연 열기/닫기 (클릭하여 접기/펼치기)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 

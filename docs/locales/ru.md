@@ -37,25 +37,40 @@
 
 ## 🏛️ Архитектура Системы и Топология Анализа
 
+<details open>
+<summary><b>🏛️ Показать Архитектуру Системы и Топологию (Нажмите чтобы скрыть/раскрыть)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/ru/architecture.svg" alt="architecture diagram" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 🏗️ Конвейер Обнаружения EDR/SIEM
 
+<details open>
+<summary><b>🏗️ Показать Конвейер Обнаружения EDR/SIEM (Нажмите чтобы скрыть/раскрыть)</b></summary>
+<br>
+
 <p align="center">
   <a href="https://github.com/maya-thorne/chromium-app-spoofing-forensics"><img src="../assets/locales/ru/detection_pipeline.svg" alt="detection pipeline" width="100%" /></a>
 </p>
+</details>
 
 ---
 
 ## 💻 Демонстрация в Интерактивном Терминале
 
+<details open>
+<summary><b>💻 Показать Демонстрацию в Терминале (Нажмите чтобы скрыть/раскрыть)</b></summary>
+<br>
+
 <p align="center">
   <img src="../assets/demo_casf_terminal.svg" alt="Terminal Demo" width="100%" />
 </p>
+</details>
 
 ---
 
