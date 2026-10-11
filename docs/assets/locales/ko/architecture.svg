@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711"/>
+      <stop offset="50%" stop-color="#0a1224"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+    <linearGradient id="neonTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" rx="16" fill="url(#archBg)"/>
+  <rect x="1" y="1" width="1198" height="618" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="50" y="50" fill="url(#neonTitle)" font-family="ui-monospace, monospace" font-size="22" font-weight="900" text-rendering="geometricPrecision">
+    크로미움 앱 스푸핑 포렌식 시스템 아키텍처
+  </text>
+  <text x="50" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-rendering="geometricPrecision">
+    정적 트리아지 · LNK 바이너리 카빙 · 윈도우 계층 감사 · 프로토콜 방어
+  </text>
+
+  <!-- 4 Columns (Card Width = 250px) -->
+
+  <!-- Column 1 -->
+  <g transform="translate(50, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#38bdf8" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">1. LNK 아티팩트 트리아지</text>
+    <text x="18" y="52" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10.5">[MS-SHLLINK] 카빙</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 1.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">헤더 & CLSID 파서</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">76바이트 ShellLinkHeader</text>
+    <text x="28" y="138" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9.5">LinkCLSID 및 플래그 검증</text>
+
+    <!-- Module 1.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">StringData 추출기</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">COMMAND_LINE_ARGUMENTS</text>
+    <text x="28" y="228" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9.5">--app= 및 -incognito 추출</text>
+
+    <!-- Module 1.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">아이콘 위치 감사기</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">HasIconLocation 추출</text>
+    <text x="28" y="318" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">Teams/Office 아이콘 위장</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">상태: LNK 파싱 완료</text>
+  </g>
+
+  <!-- Column 2 -->
+  <g transform="translate(330, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#818cf8" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#818cf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">2. 런타임 텔레메트리</text>
+    <text x="18" y="52" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="10.5">CLI 및 프로세스 계층</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 2.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">플래그 조합 매트릭스</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">--app= 및 -incognito 결합</text>
+    <text x="28" y="138" fill="#818cf8" font-family="ui-monospace, monospace" font-size="9.5">세션 격리 및 캐시 회피</text>
+
+    <!-- Module 2.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">모달 규격 탐지기</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">--window-size=440,520</text>
+    <text x="28" y="228" fill="#818cf8" font-family="ui-monospace, monospace" font-size="9.5">로그인 모달 픽셀 모사</text>
+
+    <!-- Module 2.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">부모-자식 관계 감사</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">스크립트 인터프리터 부모</text>
+    <text x="28" y="318" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">PowerShell/CMD 브라우저 기동</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">상태: CLI 이상치 탐지됨</text>
+  </g>
+
+  <!-- Column 3 -->
+  <g transform="translate(610, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">3. 윈도우 계층 구조</text>
+    <text x="18" y="52" fill="#fde68a" font-family="ui-monospace, monospace" font-size="10.5">클래스 vs 프로세스 감사</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 3.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">타이틀-프로세스 불일치</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">주장된 식별자 검증</text>
+    <text x="28" y="138" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">브라우저 내 Teams 타이틀</text>
+
+    <!-- Module 3.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Win32 윈도우 클래스</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Chrome_WidgetWin_1</text>
+    <text x="28" y="228" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">브라우저 UI 완전 부재</text>
+
+    <!-- Module 3.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">네이티브 래퍼 카빙</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">WebView2 / CefSharp .NET</text>
+    <text x="28" y="318" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">임시 폴더 내 래퍼 실행</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">상태: 윈도우 감사 완료</text>
+  </g>
+
+  <!-- Column 4 -->
+  <g transform="translate(890, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#10b981" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">4. 프로토콜 및 방어</text>
+    <text x="18" y="52" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10.5">규칙 및 오리진 바인딩</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 4.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">52개 Sigma 룰</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Sysmon EID 1, 11 및 4688</text>
+    <text x="28" y="138" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">방어 회피 및 실행 차단</text>
+
+    <!-- Module 4.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">32개 YARA 시그니처</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">바이너리 LNK 및 HTML DOM</text>
+    <text x="28" y="228" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">가짜 주소창 시그니처</text>
+
+    <!-- Module 4.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">암호학적 방어 체계</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">FIDO2 / WebAuthn Origin</text>
+    <text x="28" y="318" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">오리진 바인딩 강제 적용</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">상태: 방어 준비 완료</text>
+  </g>
+</svg>

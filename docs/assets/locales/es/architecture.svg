@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="archBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040711"/>
+      <stop offset="50%" stop-color="#0a1224"/>
+      <stop offset="100%" stop-color="#050814"/>
+    </linearGradient>
+    <linearGradient id="neonTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" rx="16" fill="url(#archBg)"/>
+  <rect x="1" y="1" width="1198" height="618" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="50" y="50" fill="url(#neonTitle)" font-family="ui-monospace, monospace" font-size="22" font-weight="900" text-rendering="geometricPrecision">
+    ARQUITECTURA FORENSE DE SUPLANTACIÓN DE CHROMIUM
+  </text>
+  <text x="50" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-rendering="geometricPrecision">
+    Triaje Estático · Extracción LNK · Auditoría de Ventanas · Defensa Criptográfica
+  </text>
+
+  <!-- 4 Columns (Card Width = 250px) -->
+
+  <!-- Column 1 -->
+  <g transform="translate(50, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#38bdf8" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">1. TRIAJE DE ARTEFACTOS LNK</text>
+    <text x="18" y="52" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10.5">Extracción [MS-SHLLINK]</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 1.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Analizador de Cabecera y CLSID</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">ShellLinkHeader de 76 bytes</text>
+    <text x="28" y="138" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9.5">Auditoría de LinkCLSID y Flags</text>
+
+    <!-- Module 1.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Extractor de StringData</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">COMMAND_LINE_ARGUMENTS</text>
+    <text x="28" y="228" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="9.5">Extracción de --app= e -incognito</text>
+
+    <!-- Module 1.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Auditor de Ubicación de Icono</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Extracción de HasIconLocation</text>
+    <text x="28" y="318" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">Suplantación de Icono Teams</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">ESTADO: LNK_ANALIZADO_OK</text>
+  </g>
+
+  <!-- Column 2 -->
+  <g transform="translate(330, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#818cf8" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#818cf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">2. TELEMETRÍA EN EJECUCIÓN</text>
+    <text x="18" y="52" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="10.5">CLI y Jerarquía de Procesos</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 2.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Matriz de Combinación de Flags</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">--app= con -incognito</text>
+    <text x="28" y="138" fill="#818cf8" font-family="ui-monospace, monospace" font-size="9.5">Evasión de Aislamiento de Sesión</text>
+
+    <!-- Module 2.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Detector de Geometría Modal</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">--window-size=440,520</text>
+    <text x="28" y="228" fill="#818cf8" font-family="ui-monospace, monospace" font-size="9.5">Imitación de Modal de Acceso</text>
+
+    <!-- Module 2.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Auditor de Padre-Hijo</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Padres de Intérprete de Scripts</text>
+    <text x="28" y="318" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">PowerShell/CMD a Navegador</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">ESTADO: ANOMALÍA_CLI_OK</text>
+  </g>
+
+  <!-- Column 3 -->
+  <g transform="translate(610, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#f59e0b" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">3. JERARQUÍA DE VENTANAS</text>
+    <text x="18" y="52" fill="#fde68a" font-family="ui-monospace, monospace" font-size="10.5">Auditoría de Clase vs Proceso</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 3.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Discordancia Título-Proceso</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Auditoría de Identidad Declarada</text>
+    <text x="28" y="138" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">Título Teams en Navegador</text>
+
+    <!-- Module 3.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Clase de Ventana Win32</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Chrome_WidgetWin_1</text>
+    <text x="28" y="228" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="9.5">Ausencia de Controles de Navegador</text>
+
+    <!-- Module 3.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Extracción de Envoltorios</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">WebView2 / CefSharp .NET</text>
+    <text x="28" y="318" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">Envoltorios en Carpeta Temp</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">ESTADO: VENTANA_AUDITADA</text>
+  </g>
+
+  <!-- Column 4 -->
+  <g transform="translate(890, 110)">
+    <rect width="250" height="460" rx="10" fill="#0b132b" stroke="#10b981" stroke-width="1.3"/>
+    <text x="18" y="32" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">4. PROTOCOLOS Y DEFENSA</text>
+    <text x="18" y="52" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10.5">Reglas y Vinculación de Origen</text>
+    <line x1="18" y1="64" x2="232" y2="64" stroke="#1e293b" stroke-width="1"/>
+
+    <!-- Module 4.1 -->
+    <rect x="18" y="80" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="104" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">52 Reglas Sigma</text>
+    <text x="28" y="122" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Sysmon EID 1, 11 y 4688</text>
+    <text x="28" y="138" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">Evasión de Defensa y Ejecución</text>
+
+    <!-- Module 4.2 -->
+    <rect x="18" y="170" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="194" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">32 Firmas YARA</text>
+    <text x="28" y="212" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">LNK Binario y DOM HTML</text>
+    <text x="28" y="228" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">Firmas de Barra Falsa</text>
+
+    <!-- Module 4.3 -->
+    <rect x="18" y="260" width="214" height="75" rx="6" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="28" y="284" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="11" font-weight="700">Defensa Criptográfica</text>
+    <text x="28" y="302" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9.5">Origen FIDO2 / WebAuthn</text>
+    <text x="28" y="318" fill="#10b981" font-family="ui-monospace, monospace" font-size="9.5">Aplicación de Origin-Binding</text>
+
+    <!-- Status Box -->
+    <rect x="18" y="390" width="214" height="45" rx="6" fill="#052e16" stroke="#10b981" stroke-width="1"/>
+    <text x="28" y="418" fill="#4ade80" font-family="ui-monospace, monospace" font-size="11" font-weight="700">ESTADO: DEFENSA_LISTA</text>
+  </g>
+</svg>

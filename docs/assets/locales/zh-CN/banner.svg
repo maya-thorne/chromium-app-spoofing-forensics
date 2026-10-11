@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="50%" stop-color="#0b132b"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="320" rx="16" fill="url(#bgGrad)"/>
+  <rect x="1" y="1" width="1198" height="318" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Top Badge -->
+  <g transform="translate(60, 48)">
+    <rect width="280" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <circle cx="16" cy="14" r="5" fill="#38bdf8"/>
+    <text x="28" y="19" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="11" font-weight="700">BLUE TEAM EDR &amp; FORENSICS</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="60" y="125" fill="url(#titleGrad)" font-family="ui-monospace, monospace" font-size="28" font-weight="900" text-rendering="geometricPrecision">
+    CHROMIUM应用模式伪装与界面欺骗取证
+  </text>
+
+  <!-- Subtitle -->
+  <text x="60" y="165" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" text-rendering="geometricPrecision">
+    蓝队 EDR/SIEM 检测工程 · [MS-SHLLINK] 雕刻 · 窗口类审计
+  </text>
+
+  <!-- 4 Badges Pill Row -->
+  <g transform="translate(60, 220)">
+    <!-- Pill 1: Sigma -->
+    <g transform="translate(0, 0)">
+      <rect width="170" height="42" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.2"/>
+      <text x="14" y="26" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="12" font-weight="700">52 SIGMA RULES</text>
+    </g>
+
+    <!-- Pill 2: YARA -->
+    <g transform="translate(185, 0)">
+      <rect width="170" height="42" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+      <text x="14" y="26" fill="#10b981" font-family="ui-monospace, monospace" font-size="12" font-weight="700">32 YARA RULES</text>
+    </g>
+
+    <!-- Pill 3: SIEM -->
+    <g transform="translate(370, 0)">
+      <rect width="180" height="42" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="14" y="26" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="12" font-weight="700">SPLUNK &amp; ELASTIC</text>
+    </g>
+
+    <!-- Pill 4: License -->
+    <g transform="translate(565, 0)">
+      <rect width="160" height="42" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1.2"/>
+      <text x="14" y="26" fill="#818cf8" font-family="ui-monospace, monospace" font-size="12" font-weight="700">MT-SRL LICENSE</text>
+    </g>
+  </g>
+</svg>

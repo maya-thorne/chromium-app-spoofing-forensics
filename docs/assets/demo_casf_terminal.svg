@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" width="100%" height="100%">
+  <rect width="1000" height="520" rx="12" fill="#030712" stroke="#1f2937" stroke-width="1.5"/>
+  <rect x="0" y="0" width="1000" height="40" rx="12" fill="#111827"/>
+  <circle cx="24" cy="20" r="6" fill="#ef4444"/>
+  <circle cx="44" cy="20" r="6" fill="#f59e0b"/>
+  <circle cx="64" cy="20" r="6" fill="#10b981"/>
+  <text x="500" y="25" fill="#9ca3af" font-family="ui-monospace, monospace" font-size="12" text-anchor="middle">casf-triage-cli · python -m src.cli --lnk shortcut.lnk</text>
+
+  <g font-family="ui-monospace, monospace" font-size="12" fill="#e5e7eb" transform="translate(24, 70)">
+    <text y="0" fill="#38bdf8">PS C:\Security\CASF&gt; python -m src.cli --lnk 01_brave_app_youtube_incognito.lnk</text>
+    <text y="24" fill="#64748b">──────────────────────────────────────────────────────────────────────────────</text>
+    <text y="48" fill="#a855f7" font-weight="700">CHROMIUM APP SPOOFING &amp; INTERFACE MASQUERADING FORENSIC SUITE (CASF)</text>
+    <text y="70" fill="#94a3b8">Blue Team EDR/SIEM Analysis · LNK Carving · Window Hierarchy Auditor</text>
+    <text y="100" fill="#f8fafc">📂 LNK Forensic Analysis: 01_brave_app_youtube_incognito.lnk (1,959 bytes)</text>
+    <text y="124" fill="#cbd5e1">  • Link Flags: HasLinkTargetIDList, HasLinkInfo, HasRelativePath, HasArguments, IsUnicode</text>
+    <text y="148" fill="#cbd5e1">  • Timestamps: Created=2024-05-17T08:21:58 | Written=2024-05-24T09:09:04</text>
+    <text y="172" fill="#cbd5e1">  • Window Mode: SW_SHOWNORMAL (Normal Window)</text>
+    <text y="196" fill="#f59e0b" font-weight="700">  • Target Arguments: --app=https://youtube.com -incognito</text>
+    <text y="230" fill="#ef4444" font-weight="700">  🎯 Threat Assessment: [CRITICAL - Score: 85/100]</text>
+    <text y="254" fill="#fca5a5">     [!] CHROMIUM_APP_MODE_DETECTED: Invokes browser with --app flag to eliminate address bar</text>
+    <text y="278" fill="#fca5a5">     [!] INCOGNITO_PROFILE_EVASION: Forces clean profile defeating existing auth/cookie caches</text>
+    <text y="302" fill="#fca5a5">     [!] REMOTE_URL_APP_LOAD: Directly frames remote authentication page without browser chrome</text>
+    <text y="336" fill="#34d399">  🛡️ Sigma Dispatch: 52 Modular Rules Evaluated · Sysmon Event ID 1 &amp; 4688 Match Confirmed</text>
+    <text y="360" fill="#38bdf8">  ⚡ SIEM Feed: Splunk SPL &amp; Elastic KQL Alerts Generated</text>
+    <text y="394" fill="#38bdf8">PS C:\Security\CASF&gt; <tspan fill="#34d399">█</tspan></text>
+  </g>
+</svg>

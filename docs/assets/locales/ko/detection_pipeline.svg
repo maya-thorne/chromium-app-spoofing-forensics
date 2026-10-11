@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0a1228"/>
+      <stop offset="100%" stop-color="#040610"/>
+    </linearGradient>
+    <linearGradient id="pipeTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="480" rx="16" fill="url(#pipeBg)"/>
+  <rect x="1" y="1" width="1198" height="478" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="50" y="50" fill="url(#pipeTitle)" font-family="ui-monospace, monospace" font-size="22" font-weight="900" text-rendering="geometricPrecision">
+    블루팀 EDR 및 SIEM 탐지 파이프라인
+  </text>
+  <text x="50" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-rendering="geometricPrecision">
+    텔레메트리 수집 · 이상치 탐지 · 휴리스틱 평가 · 관제 알림 발송
+  </text>
+
+  <!-- 4 Cards -->
+  <g transform="translate(50, 115)">
+    <!-- Stage 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">1단계: 텔레메트리 수집</text>
+      <text x="20" y="54" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10">Sysmon EID 1 / 11 / 4688</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">프로세스 생성 (EID 1)</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">--app= 포함 커맨드라인</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">LNK 생성 추적 (EID 11)</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">바탕화면/시작프로그램 바로가기</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">보안 이벤트 4688</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">실행 인자 실시간 추적</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 252 150 L 280 150 M 274 144 L 280 150 L 274 156" stroke="#38bdf8" stroke-width="2" fill="none"/>
+
+    <!-- Stage 2 -->
+    <g transform="translate(288, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#818cf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">2단계: 바이너리 파싱</text>
+      <text x="20" y="54" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="10">[MS-SHLLINK] 분석</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">바이너리 LNK 카빙</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">인자 및 아이콘 경로 추출</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">타겟 경로 검증</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">로컬 HTML vs 원격 주소</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">ExtraData 블록 분석</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">NetBIOS 및 머신 ID 추출</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 540 150 L 568 150 M 562 144 L 568 150 L 562 156" stroke="#818cf8" stroke-width="2" fill="none"/>
+
+    <!-- Stage 3 -->
+    <g transform="translate(576, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">3단계: 휴리스틱 분석</text>
+      <text x="20" y="54" fill="#fde68a" font-family="ui-monospace, monospace" font-size="10">위장 식별 분류기</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">윈도우 클래스 감사</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Chrome_WidgetWin_1 불일치</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">디바이스 코드 가드</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">RFC 8628 devicelogin 엔드포인트</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">가짜 주소창 탐지</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">CSS/DOM 자물쇠 아이콘 탐지</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <path d="M 828 150 L 856 150 M 850 144 L 856 150 L 850 156" stroke="#f59e0b" stroke-width="2" fill="none"/>
+
+    <!-- Stage 4 -->
+    <g transform="translate(864, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">4단계: 보안 관제 전파</text>
+      <text x="20" y="54" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10">SIEM 및 호스트 격리</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">52개 Sigma 룰 매칭</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Sysmon EID 1 및 4688 경보</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Splunk SPL / Elastic KQL</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">즉시 투입형 SOC 상관분석</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">SOAR 호스트 격리</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">자동화된 세션 토큰 폐기</text>
+    </g>
+  </g>
+</svg>

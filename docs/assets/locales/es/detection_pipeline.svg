@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0a1228"/>
+      <stop offset="100%" stop-color="#040610"/>
+    </linearGradient>
+    <linearGradient id="pipeTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="480" rx="16" fill="url(#pipeBg)"/>
+  <rect x="1" y="1" width="1198" height="478" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="50" y="50" fill="url(#pipeTitle)" font-family="ui-monospace, monospace" font-size="22" font-weight="900" text-rendering="geometricPrecision">
+    PIPELINE DE DETECCIÓN EDR Y SIEM DE BLUE TEAM
+  </text>
+  <text x="50" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-rendering="geometricPrecision">
+    Ingesta de Telemetría · Detección de Anomalías · Evaluación Heurística · Despacho de Alertas
+  </text>
+
+  <!-- 4 Cards -->
+  <g transform="translate(50, 115)">
+    <!-- Stage 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">ETAPA 01: INGESTA</text>
+      <text x="20" y="54" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10">Sysmon EID 1 / 11 / 4688</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Creación de Proceso (EID 1)</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">CommandLine con --app=</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Telemetría LNK (EID 11)</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Acceso directo en Desktop/Startup</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Evento de Seguridad 4688</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Seguimiento de Argumentos CLI</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 252 150 L 280 150 M 274 144 L 280 150 L 274 156" stroke="#38bdf8" stroke-width="2" fill="none"/>
+
+    <!-- Stage 2 -->
+    <g transform="translate(288, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#818cf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">ETAPA 02: ANÁLISIS</text>
+      <text x="20" y="54" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="10">Extracción [MS-SHLLINK]</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Extracción Binaria LNK</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Argumentos y Ruta de Icono</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Verificación de Destino</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">HTML Local vs Endpoint Remoto</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Análisis de Bloques ExtraData</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">NetBIOS e ID de Máquina Tracker</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 540 150 L 568 150 M 562 144 L 568 150 L 562 156" stroke="#818cf8" stroke-width="2" fill="none"/>
+
+    <!-- Stage 3 -->
+    <g transform="translate(576, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">ETAPA 03: HEURÍSTICA</text>
+      <text x="20" y="54" fill="#fde68a" font-family="ui-monospace, monospace" font-size="10">Clasificador de Suplantación</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Auditor de Clase de Ventana</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Chrome_WidgetWin_1 vs Proceso</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Guardia de Device Code Flow</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Endpoint devicelogin RFC 8628</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Barra de Dirección Sintética</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Detección de Candado Falso CSS</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <path d="M 828 150 L 856 150 M 850 144 L 856 150 L 850 156" stroke="#f59e0b" stroke-width="2" fill="none"/>
+
+    <!-- Stage 4 -->
+    <g transform="translate(864, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">ETAPA 04: DESPACHO</text>
+      <text x="20" y="54" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10">SIEM y Contención de Host</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">52 Reglas Sigma Modulares</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Alertas Sysmon EID 1 y 4688</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Splunk SPL / Elastic KQL</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Consultas de Correlación SOC</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Aislamiento SOAR</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Revocación Automática de Token</text>
+    </g>
+  </g>
+</svg>

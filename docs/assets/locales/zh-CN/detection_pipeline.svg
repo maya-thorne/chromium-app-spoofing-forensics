@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pipeBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050814"/>
+      <stop offset="50%" stop-color="#0a1228"/>
+      <stop offset="100%" stop-color="#040610"/>
+    </linearGradient>
+    <linearGradient id="pipeTitle" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="480" rx="16" fill="url(#pipeBg)"/>
+  <rect x="1" y="1" width="1198" height="478" rx="15" fill="none" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="50" y="50" fill="url(#pipeTitle)" font-family="ui-monospace, monospace" font-size="22" font-weight="900" text-rendering="geometricPrecision">
+    蓝队 EDR 与 SIEM 检测流水线
+  </text>
+  <text x="50" y="78" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" text-rendering="geometricPrecision">
+    遥测采集 · 异常检测 · 启发式评分 · 告警分发
+  </text>
+
+  <!-- 4 Cards -->
+  <g transform="translate(50, 115)">
+    <!-- Stage 1 -->
+    <g transform="translate(0, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#38bdf8" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">阶段 01: 遥测采集</text>
+      <text x="20" y="54" fill="#7dd3fc" font-family="ui-monospace, monospace" font-size="10">Sysmon EID 1 / 11 / 4688</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">进程创建事件 (EID 1)</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">包含 --app= 的命令行</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">LNK 创建监控 (EID 11)</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">桌面/启动项可疑快捷方式</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">安全事件 4688</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">实时跟踪启动参数</text>
+    </g>
+
+    <!-- Arrow 1 -->
+    <path d="M 252 150 L 280 150 M 274 144 L 280 150 L 274 156" stroke="#38bdf8" stroke-width="2" fill="none"/>
+
+    <!-- Stage 2 -->
+    <g transform="translate(288, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#818cf8" font-family="ui-monospace, monospace" font-size="13" font-weight="700">阶段 02: 格式解析</text>
+      <text x="20" y="54" fill="#a5b4fc" font-family="ui-monospace, monospace" font-size="10">[MS-SHLLINK] 提取</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">二进制 LNK 提取</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">提取参数与图标路径</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">目标路径验证</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">本地 HTML vs 远程端点</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">ExtraData 块分析</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">NetBIOS 与机器 ID 提取</text>
+    </g>
+
+    <!-- Arrow 2 -->
+    <path d="M 540 150 L 568 150 M 562 144 L 568 150 L 562 156" stroke="#818cf8" stroke-width="2" fill="none"/>
+
+    <!-- Stage 3 -->
+    <g transform="translate(576, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#f59e0b" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#f59e0b" font-family="ui-monospace, monospace" font-size="13" font-weight="700">阶段 03: 启发式研判</text>
+      <text x="20" y="54" fill="#fde68a" font-family="ui-monospace, monospace" font-size="10">伪装行为分类器</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">窗口类审计</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Chrome_WidgetWin_1 异常</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">设备代码流防护</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">RFC 8628 devicelogin 节点</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">伪造地址栏检测</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">CSS/DOM 伪造锁图标检测</text>
+    </g>
+
+    <!-- Arrow 3 -->
+    <path d="M 828 150 L 856 150 M 850 144 L 856 150 L 850 156" stroke="#f59e0b" stroke-width="2" fill="none"/>
+
+    <!-- Stage 4 -->
+    <g transform="translate(864, 0)">
+      <rect width="245" height="300" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.4"/>
+      <text x="20" y="34" fill="#10b981" font-family="ui-monospace, monospace" font-size="13" font-weight="700">阶段 04: 告警分发</text>
+      <text x="20" y="54" fill="#6ee7b7" font-family="ui-monospace, monospace" font-size="10">SIEM 与主机隔离</text>
+      <line x1="20" y1="66" x2="225" y2="66" stroke="#1e293b" stroke-width="1"/>
+
+      <rect x="16" y="80" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="100" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">52 条 Sigma 规则匹配</text>
+      <text x="26" y="116" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">Sysmon EID 1 及 4688 告警</text>
+
+      <rect x="16" y="140" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="160" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">Splunk SPL / Elastic KQL</text>
+      <text x="26" y="176" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">开箱即用 SOC 关联查询</text>
+
+      <rect x="16" y="200" width="213" height="48" rx="6" fill="#1e293b"/>
+      <text x="26" y="220" fill="#f8fafc" font-family="ui-monospace, monospace" font-size="10.5" font-weight="700">SOAR 主机隔离</text>
+      <text x="26" y="236" fill="#94a3b8" font-family="ui-monospace, monospace" font-size="9">自动化吊销凭证令牌</text>
+    </g>
+  </g>
+</svg>
