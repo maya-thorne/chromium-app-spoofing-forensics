@@ -1,0 +1,28 @@
+title: Registry Set Win Protocol Handler Hijack
+id: casf-sigma-pers-045
+status: production
+description: Detects registry modification overriding msteams or slack protocol handlers.
+references:
+    - https://github.com/maya-thorne/chromium-app-spoofing-forensics
+author: Maya Thorne (Systems & Security Research)
+date: 2026-10-11
+tags:
+    - attack.defense_evasion
+    - attack.t1546_015
+logsource:
+    category: process_creation
+    product: windows
+detection:
+    selection_image:
+        Image|endswith:
+            - '\chrome.exe'
+            - '\msedge.exe'
+            - '\brave.exe'
+            - '\opera.exe'
+    selection_flags:
+        CommandLine|contains:
+            - '--app='
+    condition: selection_image and selection_flags
+falsepositives:
+    - Legitimate enterprise Progressive Web Apps (PWAs) deployed via Microsoft Intune or Chrome Enterprise.
+level: critical
