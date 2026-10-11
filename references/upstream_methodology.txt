@@ -1,0 +1,17 @@
+이 방법
+링크로 구현된 해킹 기법입니다
+
+ex : 바로가기 만들기
+브라우저 이용
+
+# 사이트가 app로 인식됨
+"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=[URL]
+
+# 사이트가 app 그리고 시크릿모드
+"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=[URL] -incognito
+
+# html 파일 경로로 app
+"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=C:\Users\user\Desktop\1.html
+
+# html 파일 app 시크릿
+"C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe" --app=C:\Users\user\Desktop\1.html -incognito
